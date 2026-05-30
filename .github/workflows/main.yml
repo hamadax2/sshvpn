@@ -26,14 +26,12 @@ jobs:
       - uses: actions/cache@v4
         with:
           path: .buildozer
-          key: ${{ runner.os }}-${{ steps.get-date.outputs.date }}-${{ hashFiles('buildozer.spec') }}
-
-      - name: Build with Buildozer
-        uses: ArtemSBulgakov/buildozer-action@v1
-        id: buildozer
+          key: ${{ runner.os }}-${{ steps.get-date.outputs.date }}-${{ hashFiles('buildozer.spec') 
+      - name: Build APK
+        uses: digreatbrian/buildozer-action@v2
         with:
-          command: buildozer android debug
-          buildozer_version: stable
+          python-version: 3.8
+          buildozer-cmd: buildozer -v android debug
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
