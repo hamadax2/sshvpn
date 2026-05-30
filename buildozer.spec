@@ -40,6 +40,8 @@ fullscreen = 0
 #
 # Android specific
 #
+android.accept_sdk_license = True
+android.skip_update = False
 
 # (list) Permissions
 # INTERNET is required for SSH; the others help with networking state.
