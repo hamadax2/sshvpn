@@ -33,7 +33,7 @@ jobs:
         with:
           workdir: .
           buildozer_version: stable
-          command: buildozer android debug
+          command: pip3 install --user --upgrade Cython==0.29.33 virtualenv && buildozer android clean && buildozer android debug
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
