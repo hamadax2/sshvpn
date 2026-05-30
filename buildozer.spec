@@ -23,7 +23,7 @@ version = 1.0
 
 # (list) Application requirements
 # Comma separated python modules / recipes to bundle into the APK.
-requirements = python3,kivy==2.3.0,kivymd==1.2.0,pillow,paramiko,cryptography,bcrypt,pynacl,six,arabic_reshaper,python-bidi
+requirements = python3, kivy==2.3.0, kivymd==1.2.0, pillow, openssl, cryptography==39.0.2, bcrypt, pynacl, paramiko, six, arabic_reshaper, python-bidi
 
 # (str) Presplash of the application
 #presplash.filename = %(source.dir)s/data/presplash.png
@@ -54,10 +54,10 @@ android.api = 33
 android.minapi = 23
 
 # (str) Android NDK version to use
-#android.ndk = 25b
+android.ndk_api = 21
 
 # (list) The Android archs to build for
-android.archs = arm64-v8a, armeabi-v7a
+android.archs = arm64-v8a
 
 # (bool) enables Android auto backup feature (Android API >=23)
 android.allow_backup = True
